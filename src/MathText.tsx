@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import { I18nManager, StyleProp, StyleSheet, Text, TextProps, View, ViewStyle } from 'react-native';
 import { MathViewProps } from './common';
 //@ts-ignore
-import MathView from './MathView';
+//import MathView from './MathView';
 
 type ElementOrRenderer<T = {}> = ((props: T) => JSX.Element) | JSX.Element
 
@@ -21,7 +21,7 @@ export type MathTextItemRenderingProps = MathTextRowRenderingProps & { rowIndex:
 export type MathTextItemProps<T extends boolean = boolean> = (T extends true ? Omit<MathViewProps, 'math'> : TextProps) & {
     value: string,
     isMath: T,
-    Component?: MathView,
+    Component?: any, //MathView,
     CellRendererComponent?: ElementOrRenderer,
     inline?: boolean
 }
